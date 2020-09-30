@@ -37,7 +37,7 @@
         <div class="row justify-content-center mt-5">
             <div class="col-4">
 
-                <form action="index.php" method="POST">
+                <form action="tienda.php" method="POST">
                     <h3 class="text-center mb-4">Factura de Compra</h3>
                     <div class="row mb-3">
                         <div class="col">
@@ -57,26 +57,26 @@
                     </div>
                     <div class="row mb-3">
                         <div class="col">
-                            <input type="text" class="form-control" placeholder="Producto3">
+                            <input type="text" class="form-control" placeholder="Producto3"name="producto3">
                         </div>
                         <div class="col">
-                            <input type="number" class="form-control" placeholder="Precio($)">
-                        </div>
-                    </div>
-                    <div class="row mb-3">
-                        <div class="col">
-                            <input type="text" class="form-control" placeholder="Producto4">
-                        </div>
-                        <div class="col">
-                            <input type="number" class="form-control" placeholder="Precio($)">
+                            <input type="number" class="form-control" placeholder="Precio($)" name="precio3">
                         </div>
                     </div>
                     <div class="row mb-3">
                         <div class="col">
-                            <input type="text" class="form-control" placeholder="Producto5">
+                            <input type="text" class="form-control" placeholder="Producto4"name="producto4">
                         </div>
                         <div class="col">
-                            <input type="number" class="form-control" placeholder="Precio($)">
+                            <input type="number" class="form-control" placeholder="Precio($)"name="precio4">
+                        </div>
+                    </div>
+                    <div class="row mb-3">
+                        <div class="col">
+                            <input type="text" class="form-control" placeholder="Producto5"name="producto5">
+                        </div>
+                        <div class="col">
+                            <input type="number" class="form-control" placeholder="Precio($)"name="precio5">
                         </div>
                     </div>
                     <button type="submit" class="btn btn-primary btn-block" name="botonCalcular">Calcular</button>
@@ -108,17 +108,17 @@
 
                            
 
-                            $total=$precio1+$precio2;
+                            $total=$precio1+$precio2+$precio3+$precio4+$precio5;
 
                             echo("El producto 1 es: ".$producto1." -----($) ".$precio1);
                             echo("<br>");
                             echo("El producto 2 es: ".$producto2." -----($) ".$precio2);
                             echo("<br>");
-                            echo("El producto 4 es: ".$producto3." -----($) ".$precio2);
+                            echo("El producto 3 es: ".$producto3." -----($) ".$precio3);
                             echo("<br>");
-                            echo("El producto 4 es: ".$producto4." -----($) ".$precio2);
+                            echo("El producto 4 es: ".$producto4." -----($) ".$precio4);
                             echo("<br>");
-                            echo("El producto 5 es: ".$producto5." -----($) ".$precio2);
+                            echo("El producto 5 es: ".$producto5." -----($) ".$precio5);
                             echo("<br>");
                             echo("El total de la compra fué de: ".$total);
 
